@@ -94,7 +94,7 @@ export default function Contact() {
                 className="w-full py-3.5 px-4 rounded-full bg-emerald-500 hover:bg-emerald-600 text-slate-950 font-['IBM_Plex_Mono',monospace] font-bold text-xs uppercase tracking-wider flex items-center justify-center gap-2 shadow-md shadow-emerald-500/20 transition-all hover:scale-[1.01]"
               >
                 <MessageCircle className="w-4 h-4 fill-slate-950" />
-                <span>START WHATSAPP CHAT (+91 98765 43210)</span>
+                <span>START WHATSAPP CHAT (+91 9828172321)</span>
               </button>
             </div>
 
@@ -108,7 +108,7 @@ export default function Contact() {
                 <div>
                   <p className="font-['IBM_Plex_Mono',monospace] text-[10px] uppercase tracking-wider text-stone-500 font-bold">Direct Phone Call</p>
                   <a href="tel:+919828172321" className="text-sm font-bold text-[#1a1714] hover:text-[#c4410c] transition">
-                    +91 98765 43210
+                    +91 9828172321
                   </a>
                   <p className="text-[10px] text-stone-500">Support Hours: 11 AM - 6 PM IST</p>
                 </div>
@@ -198,7 +198,7 @@ export default function Contact() {
                       type="tel"
                       name="phone"
                       required
-                      placeholder="e.g. +91 98765 43210"
+                      placeholder="e.g. +91 9828172321"
                       value={formData.phone}
                       onChange={handleChange}
                       className="w-full px-3.5 py-2.5 rounded-xl bg-[#faf7f2] border border-[rgba(26,23,20,0.1)] text-sm text-[#1a1714] focus:outline-none focus:border-[#c4410c]"
