@@ -1,0 +1,159 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --bg-primary: #fcfbf9;
+  --bg-secondary: #f5f2eb;
+  --text-primary: #0f172a;
+  --text-muted: #64748b;
+  --accent-blue: #2563eb;
+  --accent-purple: #7c3aed;
+  --accent-coral: #ea580c;
+  --accent-emerald: #059669;
+}
+
+body {
+  background-color: var(--bg-primary);
+  color: var(--text-primary);
+  font-family: 'Plus Jakarta Sans', -apple-system, BlinkMacSystemFont, sans-serif;
+  overflow-x: hidden;
+  selection-background-color: #2563eb;
+}
+
+::selection {
+  background: #2563eb;
+  color: #fff;
+}
+
+/* Subtle Geometric Grid Background */
+.agency-grid {
+  background-image: 
+    linear-gradient(to right, rgba(148, 163, 184, 0.12) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(148, 163, 184, 0.12) 1px, transparent 1px);
+  background-size: 36px 36px;
+}
+
+/* Gradient Text Shimmer */
+.shimmer-text {
+  background: linear-gradient(135deg, #1e293b 0%, #2563eb 40%, #7c3aed 70%, #ec4899 100%);
+  background-size: 200% auto;
+  -webkit-background-clip: text;
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  animation: shine 6s linear infinite;
+}
+
+@keyframes shine {
+  to {
+    background-position: 200% center;
+  }
+}
+
+/* Infinite Marquee */
+@keyframes marquee {
+  0% { transform: translateX(0%); }
+  100% { transform: translateX(-50%); }
+}
+
+.animate-marquee {
+  display: flex;
+  width: max-content;
+  animation: marquee 25s linear infinite;
+}
+
+.animate-marquee:hover {
+  animation-play-state: paused;
+}
+
+/* Floating Animations */
+@keyframes float {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(-10px) rotate(0.5deg); }
+}
+
+@keyframes floatRev {
+  0%, 100% { transform: translateY(0px) rotate(0deg); }
+  50% { transform: translateY(10px) rotate(-0.5deg); }
+}
+
+.animate-float {
+  animation: float 4.5s ease-in-out infinite;
+}
+
+.animate-float-slow {
+  animation: float 7s ease-in-out infinite;
+}
+
+.animate-float-reverse {
+  animation: floatRev 5s ease-in-out infinite;
+}
+
+/* Glassmorphism Cards */
+.glass-panel {
+  background: rgba(255, 255, 255, 0.85);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(226, 232, 240, 0.9);
+}
+
+.glass-card-hover {
+  transition: all 0.35s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.glass-card-hover:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 25px 50px -12px rgba(37, 99, 235, 0.12), 0 0 0 1px rgba(37, 99, 235, 0.2);
+}
+
+/* Titanium iPhone Frame Styling */
+.iphone-frame {
+  position: relative;
+  background: linear-gradient(145deg, #1e293b 0%, #0f172a 100%);
+  border-radius: 46px;
+  padding: 11px;
+  box-shadow: 
+    0 50px 100px -20px rgba(15, 23, 42, 0.25),
+    0 30px 60px -30px rgba(37, 99, 235, 0.3),
+    inset 0 1px 2px rgba(255, 255, 255, 0.4),
+    inset 0 -1px 2px rgba(0, 0, 0, 0.6);
+}
+
+.iphone-screen {
+  position: relative;
+  border-radius: 36px;
+  overflow: hidden;
+  background: #ffffff;
+  aspect-ratio: 9 / 19.5;
+}
+
+.dynamic-island {
+  position: absolute;
+  top: 11px;
+  left: 50%;
+  transform: translateX(-50%);
+  height: 24px;
+  background: #000000;
+  border-radius: 20px;
+  z-index: 30;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 0 8px;
+  transition: all 0.3s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 7px;
+}
+::-webkit-scrollbar-track {
+  background: #f1f5f9;
+}
+::-webkit-scrollbar-thumb {
+  background: #cbd5e1;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #94a3b8;
+}
