@@ -87,7 +87,7 @@ export default function PriceCalculator({ onOpenQuote }) {
       `Please let me know how we can proceed!`
     );
 
-    window.open(`https://wa.me/919876543210?text=${message}`, '_blank');
+    window.open(`https://wa.me/919828172321?text=${message}`, '_blank');
   };
 
   return (

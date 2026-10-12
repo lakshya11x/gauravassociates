@@ -28,7 +28,7 @@ export default function OrderModal({ isOpen, onClose, plan }) {
       `Please let me know the onboarding steps!`
     );
 
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+    window.open(`https://wa.me/919828172321?text=${text}`, '_blank');
     onClose();
   };
 

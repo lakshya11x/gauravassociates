@@ -94,7 +94,7 @@ export default function WhyUs() {
             </p>
           </div>
           <a
-            href="https://wa.me/919876543210?text=Hi%20Gaurav%20Associates,%20I%20am%20interested%20in%20building%20a%20website%20or%20mobile%20app"
+            href="https://wa.me/919828172321?text=Hi%20Gaurav%20Associates,%20I%20am%20interested%20in%20building%20a%20website%20or%20mobile%20app"
             target="_blank"
             rel="noopener noreferrer"
             className="digi-btn digi-btn-grad text-white font-bold whitespace-nowrap"

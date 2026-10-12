@@ -107,7 +107,7 @@ export default function Contact() {
                 </div>
                 <div>
                   <p className="font-['IBM_Plex_Mono',monospace] text-[10px] uppercase tracking-wider text-stone-500 font-bold">Direct Phone Call</p>
-                  <a href="tel:+919876543210" className="text-sm font-bold text-[#1a1714] hover:text-[#c4410c] transition">
+                  <a href="tel:+919828172321" className="text-sm font-bold text-[#1a1714] hover:text-[#c4410c] transition">
                     +91 98765 43210
                   </a>
                   <p className="text-[10px] text-stone-500">Support Hours: 11 AM - 6 PM IST</p>

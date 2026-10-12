@@ -76,7 +76,7 @@ export default function Footer() {
             <ul className="space-y-2.5 font-['IBM_Plex_Mono',monospace] text-[11px]">
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-[#c4410c] transition">+91 9828172321</a>
+                <a href="tel:+919828172321" className="hover:text-[#c4410c] transition">+91 9828172321</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#c4410c] shrink-0" />
