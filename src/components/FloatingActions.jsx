@@ -3,7 +3,7 @@ import { MessageCircle, Sparkles } from 'lucide-react';
 
 export default function FloatingActions({ onOpenQuote }) {
   const handleWhatsApp = () => {
-    window.open('https://wa.me/919876543210?text=Hi%20Gaurav%20Associates!%20I%20want%20to%20build%20a%20website/app', '_blank');
+    window.open('https://wa.me/919828172321?text=Hi%20Gaurav%20Associates!%20I%20want%20to%20build%20a%20website/app', '_blank');
   };
 
   return (

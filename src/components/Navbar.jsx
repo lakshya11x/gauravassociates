@@ -62,7 +62,7 @@ export default function Navbar({ onOpenQuote }) {
           {/* Right Action CTAs */}
           <div className="hidden sm:flex items-center gap-3">
             <a
-              href="https://wa.me/919876543210?text=Hi%20Gaurav%20Associates!%20I%20want%20to%20discuss%20a%20website/app%20project"
+              href="https://wa.me/919828172321?text=Hi%20Gaurav%20Associates!%20I%20want%20to%20discuss%20a%20website/app%20project"
               target="_blank"
               rel="noopener noreferrer"
               className="flex items-center gap-1.5 px-3 py-2 text-xs font-['IBM_Plex_Mono',monospace] font-semibold text-emerald-800 bg-emerald-50 hover:bg-emerald-100 rounded-full border border-emerald-200 transition"
