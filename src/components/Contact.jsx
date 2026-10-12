@@ -47,7 +47,7 @@ export default function Contact() {
     const text = encodeURIComponent(
       `Hello Gaurav Associates! 🚀\nI would like to discuss a project with you:\nName: ${formData.name || 'Client'}\nService: ${formData.service}\nBudget: ${formData.budget}`
     );
-    window.open(`https://wa.me/919876543210?text=${text}`, '_blank');
+    window.open(`https://wa.me/919828172321?text=${text}`, '_blank');
   };
 
   return (
@@ -121,7 +121,7 @@ export default function Contact() {
                 <div>
                   <p className="font-['IBM_Plex_Mono',monospace] text-[10px] uppercase tracking-wider text-stone-500 font-bold">Official Email</p>
                   <a href="mailto:info@gauravassociates.in" className="text-sm font-bold text-[#1a1714] hover:text-[#c4410c] transition">
-                    info@gauravassociates.in
+                    lakshyasharma11x@gmail.com
                   </a>
                   <p className="text-[10px] text-stone-500">Send RFP / Project Requirements</p>
                 </div>
@@ -136,7 +136,7 @@ export default function Contact() {
                   <p className="text-xs font-bold text-[#1a1714]">
                     Gaurav Associates Private Limited
                   </p>
-                  <p className="text-[11px] text-stone-500">Cyber City, Tech Corridor, Delhi NCR, India</p>
+                  <p className="text-[11px] text-stone-500">Ajmer, India</p>
                 </div>
               </div>
 

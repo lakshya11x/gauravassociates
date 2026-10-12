@@ -76,11 +76,11 @@ export default function Footer() {
             <ul className="space-y-2.5 font-['IBM_Plex_Mono',monospace] text-[11px]">
               <li className="flex items-center gap-2">
                 <Phone className="w-3.5 h-3.5 text-emerald-600 shrink-0" />
-                <a href="tel:+919876543210" className="hover:text-[#c4410c] transition">+91 98765 43210</a>
+                <a href="tel:+919876543210" className="hover:text-[#c4410c] transition">+91 9828172321</a>
               </li>
               <li className="flex items-center gap-2">
                 <Mail className="w-3.5 h-3.5 text-[#c4410c] shrink-0" />
-                <a href="mailto:info@gauravassociates.in" className="hover:text-[#c4410c] transition">info@gauravassociates.in</a>
+                <a href="mailto:info@gauravassociates.in" className="hover:text-[#c4410c] transition">lakshyasharma11x@gmail.com</a>
               </li>
               <li className="text-[10px] text-stone-500">
                 Support: 11 AM - 6 PM IST (24/7 Priority)
