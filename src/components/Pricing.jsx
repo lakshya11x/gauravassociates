@@ -5,14 +5,12 @@ import {
   Sparkles, 
   Clock, 
   Apple, 
-  ArrowRight, 
-  ShieldCheck,
-  Star
+  ArrowRight
 } from 'lucide-react';
 import { websitePlans, mobileAppPlans, comboPlans } from '../data/pricingData';
 
 export default function Pricing({ onOpenQuote }) {
-  const [activeTab, setActiveTab] = useState('website'); // 'website' | 'mobile' | 'combo'
+  const [activeTab, setActiveTab] = useState('website');
 
   const getHeaderStyle = (id) => {
     switch (id) {
@@ -45,24 +43,23 @@ export default function Pricing({ onOpenQuote }) {
   };
 
   return (
-    <section id="pricing" className="py-24 bg-slate-50/60 border-t border-slate-200/80 relative">
+    <section id="pricing" className="py-24 bg-[#faf7f2] border-t border-[rgba(26,23,20,0.1)] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Header */}
+        {/* Section Header */}
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-14">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider">
-            <Sparkles className="w-3.5 h-3.5" />
-            <span>Honest & Transparent Pricing</span>
+          <div className="inline-flex items-center gap-2 font-['IBM_Plex_Mono',monospace] text-[11px] tracking-[0.25em] text-[#c4410c] uppercase">
+            <span>02 / TRANSPARENT PRICING</span>
           </div>
 
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-3xl sm:text-5xl text-[#1a1714] tracking-tight">
             Plans for Every Scale. <br className="hidden sm:inline" />
-            <span className="serif-highlight text-4xl sm:text-6xl font-normal">
+            <span className="g-text">
               Websites, iOS & Android Apps.
             </span>
           </h2>
           
-          <p className="text-sm sm:text-base text-slate-600">
+          <p className="text-base text-[#1a1714]/70">
             No surprise add-ons. 1-Year cloud hosting, free domain, mobile responsiveness, and post-launch support included.
           </p>
 
@@ -70,51 +67,51 @@ export default function Pricing({ onOpenQuote }) {
           <div className="pt-4 flex flex-wrap justify-center gap-2 sm:gap-3">
             <button
               onClick={() => setActiveTab('website')}
-              className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm ${
+              className={`px-6 py-2.5 rounded-full font-['IBM_Plex_Mono',monospace] text-xs font-bold tracking-widest transition-all ${
                 activeTab === 'website'
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300'
+                  ? 'bg-[#1a1714] text-white shadow-md'
+                  : 'bg-white text-[#1a1714]/70 hover:text-[#1a1714] border border-[rgba(26,23,20,0.12)]'
               }`}
             >
-              🌐 Website Plans (From ₹5,999)
+              WEBSITE PLANS (FROM ₹5,999)
             </button>
 
             <button
               onClick={() => setActiveTab('mobile')}
-              className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm flex items-center gap-1.5 ${
+              className={`px-6 py-2.5 rounded-full font-['IBM_Plex_Mono',monospace] text-xs font-bold tracking-widest transition-all flex items-center gap-1.5 ${
                 activeTab === 'mobile'
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300'
+                  ? 'bg-[#1a1714] text-white shadow-md'
+                  : 'bg-white text-[#1a1714]/70 hover:text-[#1a1714] border border-[rgba(26,23,20,0.12)]'
               }`}
             >
               <Apple className="w-4 h-4" />
-              <span>iOS & Android App Plans</span>
+              <span>IOS & ANDROID APPS</span>
             </button>
 
             <button
               onClick={() => setActiveTab('combo')}
-              className={`px-6 py-2.5 rounded-full text-xs sm:text-sm font-bold transition-all shadow-sm ${
+              className={`px-6 py-2.5 rounded-full font-['IBM_Plex_Mono',monospace] text-xs font-bold tracking-widest transition-all ${
                 activeTab === 'combo'
-                  ? 'bg-blue-600 text-white shadow-md shadow-blue-500/20'
-                  : 'bg-white text-slate-700 hover:text-slate-900 border border-slate-200 hover:border-slate-300'
+                  ? 'bg-[#1a1714] text-white shadow-md'
+                  : 'bg-white text-[#1a1714]/70 hover:text-[#1a1714] border border-[rgba(26,23,20,0.12)]'
               }`}
             >
-              🚀 All-in-One Combos (Web + App)
+              ALL-IN-ONE COMBOS
             </button>
           </div>
 
           {/* iOS Addon Highlight Notice */}
           {activeTab === 'website' && (
-            <div className="mt-4 p-3 rounded-2xl bg-white border border-blue-200 max-w-2xl mx-auto flex items-center justify-between text-xs text-slate-700 shadow-sm">
+            <div className="mt-4 p-3 rounded-2xl bg-white border border-[rgba(26,23,20,0.12)] max-w-2xl mx-auto flex items-center justify-between text-xs text-[#1a1714]/80 shadow-sm">
               <div className="flex items-center gap-2">
-                <Apple className="w-4 h-4 text-blue-600" />
+                <Apple className="w-4 h-4 text-[#c4410c]" />
                 <span>
                   <strong>Need an iOS App Store App?</strong> Add a native iPhone/iPad app to any website tier!
                 </span>
               </div>
               <button
                 onClick={() => setActiveTab('mobile')}
-                className="font-bold text-blue-600 hover:text-blue-700 underline whitespace-nowrap ml-2"
+                className="font-bold text-[#c4410c] hover:underline whitespace-nowrap ml-2"
               >
                 View iOS Tiers →
               </button>
@@ -123,13 +120,13 @@ export default function Pricing({ onOpenQuote }) {
 
         </div>
 
-        {/* 1. WEBSITE PLANS (Faithfully matching user's reference image) */}
+        {/* 1. WEBSITE PLANS (Matching user's reference image) */}
         {activeTab === 'website' && (
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6 items-stretch">
             {websitePlans.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative rounded-2xl overflow-hidden bg-white text-slate-900 shadow-lg border border-slate-200/90 flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
+                className={`relative rounded-2xl overflow-hidden bg-white text-slate-900 shadow-lg border border-[rgba(26,23,20,0.12)] flex flex-col justify-between transition-all duration-300 hover:-translate-y-2 hover:shadow-2xl ${
                   plan.popular ? 'ring-2 ring-red-500 shadow-red-500/10' : ''
                 }`}
               >
@@ -148,7 +145,7 @@ export default function Pricing({ onOpenQuote }) {
                     <h3 className="text-xl font-bold tracking-tight">{plan.name}</h3>
                   </div>
 
-                  {/* Card Price Bar (Exact from reference screenshot) */}
+                  {/* Card Price Bar */}
                   <div className={`py-3.5 px-4 text-center ${getSubHeaderStyle(plan.id)}`}>
                     {plan.id === 'diamond' ? (
                       <span className="text-2xl font-serif font-bold tracking-wide">
@@ -166,7 +163,7 @@ export default function Pricing({ onOpenQuote }) {
                     )}
                   </div>
 
-                  {/* Feature List (Matching image bullets) */}
+                  {/* Feature List */}
                   <div className="p-5 space-y-3 text-xs text-slate-700">
                     {plan.features.map((feat, idx) => (
                       <div key={idx} className="flex items-start gap-2.5">
@@ -182,8 +179,8 @@ export default function Pricing({ onOpenQuote }) {
                     ))}
 
                     {/* iOS Specific line */}
-                    <div className="pt-2 border-t border-slate-100 flex items-center gap-2 text-[11px] text-blue-700 font-semibold">
-                      <Apple className="w-3.5 h-3.5 text-blue-700" />
+                    <div className="pt-2 border-t border-slate-100 flex items-center gap-2 text-[11px] text-[#c4410c] font-semibold">
+                      <Apple className="w-3.5 h-3.5 text-[#c4410c]" />
                       <span>
                         {plan.id === 'diamond' 
                           ? '✓ iOS App Included' 
@@ -200,20 +197,12 @@ export default function Pricing({ onOpenQuote }) {
                 <div className="p-5 pt-0">
                   <button
                     onClick={() => onOpenQuote(plan)}
-                    className={`w-full py-2.5 px-4 rounded-xl font-bold text-xs uppercase tracking-wider transition-all flex items-center justify-center gap-1.5 shadow-sm ${
-                      plan.id === 'starter'
-                        ? 'bg-slate-900 text-white hover:bg-slate-800'
-                        : plan.id === 'silver'
-                        ? 'bg-blue-600 text-white hover:bg-blue-700'
-                        : plan.id === 'gold'
-                        ? 'bg-amber-500 text-slate-950 hover:bg-amber-400 font-extrabold'
-                        : 'bg-indigo-600 text-white hover:bg-indigo-700 font-extrabold'
-                    }`}
+                    className="w-full py-3 px-4 rounded-xl font-['IBM_Plex_Mono',monospace] font-bold text-xs uppercase tracking-wider text-white bg-[#1a1714] hover:bg-[#c4410c] transition-all flex items-center justify-center gap-1.5 shadow-sm"
                   >
                     <span>{plan.ctaText}</span>
                     <ArrowRight className="w-3.5 h-3.5" />
                   </button>
-                  <p className="text-[10px] text-center text-slate-500 mt-2 font-medium">
+                  <p className="text-[10px] text-center text-slate-500 mt-2 font-mono">
                     ⏱ {plan.deliveryTime}
                   </p>
                 </div>
@@ -229,22 +218,22 @@ export default function Pricing({ onOpenQuote }) {
             {mobileAppPlans.map((plan) => (
               <div
                 key={plan.id}
-                className={`relative rounded-3xl bg-white border border-slate-200 p-6 sm:p-7 flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-blue-500 hover:shadow-2xl ${
-                  plan.popular ? 'ring-2 ring-blue-600' : ''
+                className={`relative rounded-3xl bg-white border border-[rgba(26,23,20,0.12)] p-6 sm:p-7 flex flex-col justify-between shadow-xl transition-all duration-300 hover:-translate-y-2 hover:border-[#c4410c] hover:shadow-2xl ${
+                  plan.popular ? 'ring-2 ring-[#c4410c]' : ''
                 }`}
               >
                 {plan.popular && (
-                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-blue-600 text-white text-[11px] font-extrabold uppercase tracking-wider shadow-md">
+                  <div className="absolute -top-3.5 left-1/2 -translate-x-1/2 px-4 py-1 rounded-full bg-[#c4410c] text-white text-[10px] font-extrabold uppercase tracking-wider shadow-md font-mono">
                     {plan.badge}
                   </div>
                 )}
 
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-semibold px-2.5 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-100">
+                    <span className="mono-chip">
                       {plan.badge}
                     </span>
-                    <span className="text-xs text-blue-700 font-mono font-bold">
+                    <span className="text-xs text-[#c4410c] font-mono font-bold">
                       {plan.discount}
                     </span>
                   </div>
@@ -252,12 +241,12 @@ export default function Pricing({ onOpenQuote }) {
                   <h3 className="text-xl font-bold text-slate-900 mb-1">{plan.name}</h3>
                   <p className="text-xs text-slate-500 mb-5">{plan.subtitle}</p>
 
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-6">
+                  <div className="p-4 rounded-2xl bg-[#faf7f2] border border-[rgba(26,23,20,0.08)] mb-6">
                     <div className="flex items-baseline gap-2">
-                      <span className="text-3xl font-extrabold text-slate-900 font-sans">{plan.price}</span>
+                      <span className="text-3xl font-extrabold text-[#1a1714] font-sans">{plan.price}</span>
                       <span className="text-sm line-through text-slate-400">{plan.originalPrice}</span>
                     </div>
-                    <p className="text-[11px] text-emerald-700 mt-1 flex items-center gap-1 font-semibold">
+                    <p className="text-[11px] text-emerald-700 mt-1 flex items-center gap-1 font-mono font-bold">
                       <Clock className="w-3.5 h-3.5" /> Timeline: {plan.deliveryTime}
                     </p>
                   </div>
@@ -280,7 +269,7 @@ export default function Pricing({ onOpenQuote }) {
 
                 <button
                   onClick={() => onOpenQuote(plan)}
-                  className="w-full py-3 px-4 rounded-full font-bold text-xs uppercase tracking-wider text-white bg-blue-600 hover:bg-blue-700 shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
+                  className="w-full py-3.5 px-4 rounded-full font-['IBM_Plex_Mono',monospace] font-bold text-xs uppercase tracking-wider text-white bg-[#1a1714] hover:bg-[#c4410c] shadow-md transition-all flex items-center justify-center gap-2"
                 >
                   <Apple className="w-4 h-4" />
                   <span>{plan.ctaText}</span>
@@ -297,11 +286,11 @@ export default function Pricing({ onOpenQuote }) {
             {comboPlans.map((plan) => (
               <div
                 key={plan.id}
-                className="relative rounded-3xl bg-white border border-slate-200 p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-300"
+                className="relative rounded-3xl bg-white border border-[rgba(26,23,20,0.12)] p-8 flex flex-col justify-between shadow-xl hover:shadow-2xl transition-all duration-300"
               >
                 <div>
                   <div className="flex items-center justify-between mb-4">
-                    <span className="text-xs font-bold px-3 py-1 rounded-full bg-blue-50 text-blue-700 border border-blue-200">
+                    <span className="mono-chip">
                       ⭐ {plan.badge}
                     </span>
                     <span className="text-xs text-emerald-700 font-mono font-bold">
@@ -312,15 +301,15 @@ export default function Pricing({ onOpenQuote }) {
                   <h3 className="text-2xl font-bold text-slate-900 mb-1">{plan.name}</h3>
                   <p className="text-xs text-slate-500 mb-6">{plan.subtitle}</p>
 
-                  <div className="p-4 rounded-2xl bg-slate-50 border border-slate-100 mb-6 flex items-center justify-between">
+                  <div className="p-4 rounded-2xl bg-[#faf7f2] border border-[rgba(26,23,20,0.08)] mb-6 flex items-center justify-between">
                     <div>
                       <div className="flex items-baseline gap-2">
-                        <span className="text-3xl font-extrabold text-blue-600 font-sans">{plan.price}</span>
+                        <span className="text-3xl font-extrabold text-[#c4410c] font-sans">{plan.price}</span>
                         <span className="text-sm line-through text-slate-400">{plan.originalPrice}</span>
                       </div>
-                      <p className="text-[11px] text-slate-500 mt-1">Full stack deployment</p>
+                      <p className="text-[11px] text-slate-500 mt-1 font-mono">Full stack deployment</p>
                     </div>
-                    <span className="text-xs font-bold text-emerald-700">⏱ {plan.deliveryTime}</span>
+                    <span className="text-xs font-bold text-emerald-700 font-mono">⏱ {plan.deliveryTime}</span>
                   </div>
 
                   <div className="space-y-3 text-xs text-slate-700 mb-6">
@@ -335,7 +324,7 @@ export default function Pricing({ onOpenQuote }) {
 
                 <button
                   onClick={() => onOpenQuote(plan)}
-                  className="w-full py-3.5 px-4 rounded-full font-bold text-xs uppercase tracking-wider bg-blue-600 hover:bg-blue-700 text-white shadow-md shadow-blue-500/20 transition-all flex items-center justify-center gap-2"
+                  className="digi-btn digi-btn-grad w-full py-4 text-white font-bold"
                 >
                   <Sparkles className="w-4 h-4" />
                   <span>{plan.ctaText}</span>

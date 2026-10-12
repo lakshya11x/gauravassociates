@@ -8,19 +8,16 @@ import {
   Smartphone, 
   Globe, 
   Apple, 
-  Play, 
+  ShoppingBag, 
   CreditCard,
   Zap,
-  ShoppingBag,
-  Bell,
-  Heart,
   TrendingUp,
-  MessageCircle
+  Heart
 } from 'lucide-react';
 import confetti from 'canvas-confetti';
 
 export default function Hero({ onOpenQuote }) {
-  const [activeAppTab, setActiveAppTab] = useState('ecommerce'); // 'ecommerce' | 'health' | 'fintech'
+  const [activeAppTab, setActiveAppTab] = useState('ecommerce');
   const [notification, setNotification] = useState(false);
   const [liked, setLiked] = useState(false);
 
@@ -41,7 +38,7 @@ export default function Hero({ onOpenQuote }) {
     { name: 'Flutter', color: 'text-sky-500' },
     { name: 'Next.js', color: 'text-slate-900' },
     { name: 'Android / Kotlin', color: 'text-emerald-500' },
-    { name: 'Tailwind CSS', color: 'text-cyan-400' },
+    { name: 'Tailwind CSS', color: 'text-cyan-500' },
     { name: 'Node.js', color: 'text-green-600' },
     { name: 'Apple App Store', color: 'text-indigo-600' },
     { name: 'Google Play', color: 'text-emerald-600' },
@@ -50,131 +47,137 @@ export default function Hero({ onOpenQuote }) {
   ];
 
   return (
-    <section id="home" className="relative pt-28 pb-20 md:pt-36 md:pb-28 overflow-hidden bg-[#fcfbf9] agency-grid">
+    <section id="home" className="relative pt-32 pb-20 md:pt-40 md:pb-28 overflow-hidden bg-[#faf7f2] film-grain">
       
-      {/* Smooth Ambient Colorful Orbs */}
-      <div className="absolute top-10 left-10 w-[500px] h-[500px] bg-gradient-to-tr from-blue-300/25 via-indigo-200/20 to-transparent rounded-full blur-[120px] pointer-events-none animate-pulse-slow"></div>
-      <div className="absolute top-1/4 right-5 w-[550px] h-[550px] bg-gradient-to-br from-pink-300/25 via-purple-200/20 to-transparent rounded-full blur-[130px] pointer-events-none animate-pulse-slow"></div>
-      <div className="absolute bottom-10 left-1/3 w-[450px] h-[450px] bg-gradient-to-tr from-amber-200/20 to-emerald-200/15 rounded-full blur-[100px] pointer-events-none"></div>
+      {/* Digiryze Soft Aurora Ambient Glows */}
+      <div className="absolute top-10 left-1/4 w-[600px] h-[600px] rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(251,146,60,0.14),transparent_65%)] pointer-events-none"></div>
+      <div className="absolute top-1/3 right-10 w-[550px] h-[550px] rounded-full bg-[radial-gradient(circle_at_50%_50%,rgba(236,72,153,0.10),rgba(139,92,246,0)_60%)] pointer-events-none"></div>
 
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-12 lg:gap-8 items-center">
           
-          {/* Left Column: Bold Headline & CTAs */}
+          {/* Left Column: Bold Digiryze Headline & CTAs */}
           <div className="lg:col-span-6 space-y-6 text-left">
             
-            {/* Pill Badge */}
-            <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200/80 text-xs sm:text-sm font-semibold text-blue-900 shadow-sm animate-float">
-              <span className="flex h-2 w-2 rounded-full bg-blue-600 animate-ping"></span>
-              <span>Gaurav Associates Private Limited</span>
-              <span className="text-slate-400">•</span>
-              <span className="text-blue-700">Websites from ₹5,999 & iOS Apps</span>
+            {/* Monospace Eyebrow Badge */}
+            <div className="inline-flex items-center gap-2.5 font-['IBM_Plex_Mono',monospace] text-[11px] tracking-[0.28em] text-[#c4410c] uppercase">
+              <span className="w-1.5 h-1.5 rounded-full bg-[#c4410c] animate-ping"></span>
+              <span>01 / GA DIGITAL STUDIO</span>
+              <span className="text-stone-300">|</span>
+              <span className="text-[#1a1714]/60">PLANS FROM ₹5,999 & IOS APPS</span>
             </div>
 
-            {/* Giant Headline */}
-            <h1 className="text-4xl sm:text-6xl lg:text-[4.2rem] font-extrabold text-slate-900 tracking-tight leading-[1.08]">
+            {/* Headline with Digiryze Sunset Gradient */}
+            <h1 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-4xl sm:text-6xl lg:text-[4.2rem] text-[#1a1714] tracking-[-0.025em] leading-[1.08]">
               Transforming Ideas Into <br />
-              <span className="shimmer-text">
+              <span className="g-text">
                 World-Class Websites & iOS Apps
               </span>
             </h1>
 
-            {/* Subtitle Description */}
-            <p className="text-base sm:text-lg text-slate-600 max-w-xl font-normal leading-relaxed">
+            {/* Description */}
+            <p className="text-base sm:text-lg text-[#1a1714]/70 max-w-xl font-light leading-relaxed">
               We design and engineer high-performance responsive websites starting at 
-              <strong className="text-slate-900 font-bold"> ₹5,999 delivered in 48 hours</strong>, 
-              native <strong className="text-blue-600 font-bold">Apple App Store iOS applications</strong>, 
-              and full-stack software. Free 1-year cloud hosting, domain setup, and code ownership included.
+              <strong className="text-[#1a1714] font-semibold"> ₹5,999 delivered in 48 hours</strong>, 
+              native <strong className="text-[#c4410c] font-semibold">Apple App Store iOS applications</strong>, 
+              and custom digital software. Free 1-year cloud hosting, domain setup, and code ownership included.
             </p>
 
-            {/* Primary Action Buttons Row */}
+            {/* Primary Action Buttons */}
             <div className="flex flex-wrap items-center gap-4 pt-2">
               <a
                 href="#pricing"
-                className="inline-flex items-center justify-center gap-2 px-7 py-3.5 rounded-2xl text-sm font-bold text-white bg-blue-600 hover:bg-blue-700 shadow-lg shadow-blue-500/25 hover:shadow-xl hover:shadow-blue-500/35 transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="digi-btn digi-btn-grad font-bold shadow-xl text-white"
               >
-                <span>View Plans & Prices (From ₹5,999)</span>
+                <span>VIEW PLANS (FROM ₹5,999)</span>
                 <ArrowRight className="w-4 h-4" />
               </a>
 
               <a
                 href="#calculator"
-                className="inline-flex items-center justify-center gap-2 px-6 py-3.5 rounded-2xl text-sm font-bold text-slate-800 bg-white hover:bg-slate-50 border border-slate-300/80 shadow-sm hover:shadow-md transition-all hover:scale-[1.02] active:scale-[0.98]"
+                className="inline-flex items-center justify-center gap-2 px-6 py-3 rounded-full text-xs font-['IBM_Plex_Mono',monospace] font-bold tracking-widest text-[#1a1714] bg-[#faf7f2] border border-[rgba(26,23,20,0.25)] hover:border-[#c4410c] hover:text-[#c4410c] transition-all"
               >
-                <Sparkles className="w-4 h-4 text-amber-500" />
-                <span>Calculate Custom Cost</span>
+                <Sparkles className="w-3.5 h-3.5 text-[#fb923c]" />
+                <span>CALCULATE CUSTOM COST</span>
               </a>
             </div>
 
-            {/* Feature Badges */}
-            <div className="flex flex-wrap gap-2.5 pt-2 text-xs font-semibold">
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-emerald-50 text-emerald-800 border border-emerald-200">
-                <Zap className="w-3.5 h-3.5 text-emerald-600" />
-                <span>48-Hour Rapid Delivery</span>
-              </span>
+            {/* Digiryze Command Chip */}
+            <div className="inline-flex items-center gap-2.5 px-4 py-2 rounded-full bg-[rgba(196,65,12,0.06)] border border-[rgba(196,65,12,0.22)] font-['IBM_Plex_Mono',monospace] text-[11px] text-[#9a3412]">
+              <span className="w-2 h-2 rounded-full bg-gradient-to-r from-[#c4410c] to-[#ec4899] shadow-[0_0_8px_rgba(236,72,153,0.6)]"></span>
+              <span>gaurav: <b>launch_production --speed=48h --ios=native</b></span>
+            </div>
 
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-blue-50 text-blue-800 border border-blue-200">
-                <Apple className="w-3.5 h-3.5 text-blue-600" />
-                <span>Native iOS App Store Ready</span>
+            {/* Digiryze Mono Feature Pills */}
+            <div className="flex flex-wrap gap-2 pt-2">
+              <span className="mono-chip bg-emerald-50 text-emerald-800 border-emerald-200">
+                ✓ 48-Hour Rapid Delivery
               </span>
-
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-amber-50 text-amber-900 border border-amber-200">
-                <ShieldCheck className="w-3.5 h-3.5 text-amber-600" />
-                <span>1-Year Domain & Hosting Free</span>
+              <span className="mono-chip bg-blue-50 text-blue-800 border-blue-200">
+                ✓ Native iOS App Store Ready
               </span>
-
-              <span className="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-xl bg-purple-50 text-purple-900 border border-purple-200">
-                <Check className="w-3.5 h-3.5 text-purple-600" />
-                <span>100% Code Ownership</span>
+              <span className="mono-chip bg-amber-50 text-amber-900 border-amber-200">
+                ✓ 1-Year Domain & Cloud Hosting Free
+              </span>
+              <span className="mono-chip bg-purple-50 text-purple-900 border-purple-200">
+                ✓ 100% Full Source Code Rights
               </span>
             </div>
 
             {/* Social Proof */}
-            <div className="pt-6 border-t border-slate-200/90 flex flex-wrap items-center gap-6 sm:gap-9">
+            <div className="pt-6 border-t border-[rgba(26,23,20,0.1)] flex flex-wrap items-center gap-6 sm:gap-9">
               <div className="flex items-center gap-3">
                 <div className="flex -space-x-2">
-                  <div className="w-9 h-9 rounded-full bg-blue-600 text-white flex items-center justify-center text-xs font-bold ring-2 ring-white shadow-sm">GS</div>
-                  <div className="w-9 h-9 rounded-full bg-purple-600 text-white flex items-center justify-center text-xs font-bold ring-2 ring-white shadow-sm">RK</div>
-                  <div className="w-9 h-9 rounded-full bg-pink-500 text-white flex items-center justify-center text-xs font-bold ring-2 ring-white shadow-sm">PA</div>
-                  <div className="w-9 h-9 rounded-full bg-amber-500 text-white flex items-center justify-center text-xs font-bold ring-2 ring-white shadow-sm">VM</div>
+                  <div className="w-8 h-8 rounded-full bg-[#1a1714] text-white flex items-center justify-center text-[10px] font-bold ring-2 ring-[#faf7f2]">GS</div>
+                  <div className="w-8 h-8 rounded-full bg-[#c4410c] text-white flex items-center justify-center text-[10px] font-bold ring-2 ring-[#faf7f2]">RK</div>
+                  <div className="w-8 h-8 rounded-full bg-[#ec4899] text-white flex items-center justify-center text-[10px] font-bold ring-2 ring-[#faf7f2]">PA</div>
+                  <div className="w-8 h-8 rounded-full bg-[#8b5cf6] text-white flex items-center justify-center text-[10px] font-bold ring-2 ring-[#faf7f2]">VM</div>
                 </div>
                 <div>
                   <div className="flex items-center text-amber-500 gap-0.5">
                     {[...Array(5)].map((_, i) => (
-                      <Star key={i} className="w-3.5 h-3.5 fill-amber-400 text-amber-400" />
+                      <Star key={i} className="w-3 h-3 fill-amber-400 text-amber-400" />
                     ))}
-                    <span className="text-xs font-extrabold text-slate-900 ml-1">4.9 / 5.0</span>
+                    <span className="text-xs font-bold text-[#1a1714] ml-1">4.9</span>
                   </div>
-                  <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">
-                    500+ Happy Clients
+                  <p className="font-['IBM_Plex_Mono',monospace] text-[9px] uppercase tracking-widest text-[#1a1714]/50">
+                    98% SATISFACTION
                   </p>
                 </div>
               </div>
 
-              <div className="hidden sm:block h-8 w-[1px] bg-slate-200"></div>
+              <div className="hidden sm:block h-8 w-[1px] bg-[rgba(26,23,20,0.12)]"></div>
 
               <div>
-                <p className="font-extrabold text-lg text-slate-900">500+ Projects</p>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Delivered on Time</p>
+                <p className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-base text-[#1a1714]">
+                  500+ Projects
+                </p>
+                <p className="font-['IBM_Plex_Mono',monospace] text-[9px] uppercase tracking-widest text-[#1a1714]/50">
+                  DELIVERED ON TIME
+                </p>
               </div>
 
-              <div className="hidden sm:block h-8 w-[1px] bg-slate-200"></div>
+              <div className="hidden sm:block h-8 w-[1px] bg-[rgba(26,23,20,0.12)]"></div>
 
               <div>
-                <p className="font-extrabold text-lg text-blue-600">₹5,999</p>
-                <p className="text-[10px] font-bold uppercase tracking-wider text-slate-500">Starting Price</p>
+                <p className="font-['Plus_Jakarta_Sans',sans-serif] font-bold text-base text-[#c4410c]">
+                  ₹5,999
+                </p>
+                <p className="font-['IBM_Plex_Mono',monospace] text-[9px] uppercase tracking-widest text-[#1a1714]/50">
+                  STARTER ENTRY
+                </p>
               </div>
             </div>
 
           </div>
 
-          {/* Right Column: Stunning Interactive Titanium iPhone 16 Pro + Live Device Showcase */}
+          {/* Right Column: The Titanium iPhone 16 Pro Mockup (Retained As Requested!) */}
           <div className="lg:col-span-6 relative flex justify-center items-center">
             
             {/* Glowing Backdrop Mesh */}
-            <div className="absolute -inset-4 bg-gradient-to-r from-blue-500/20 via-purple-500/20 to-pink-500/20 rounded-[50px] blur-2xl opacity-70 animate-pulse-slow"></div>
+            <div className="absolute -inset-4 bg-gradient-to-r from-[#c4410c]/15 via-[#ec4899]/15 to-[#8b5cf6]/15 rounded-[50px] blur-2xl opacity-75 animate-pulse-slow"></div>
 
-            {/* Showcase Container */}
+            {/* Phone Container */}
             <div className="relative w-full max-w-[340px] sm:max-w-[370px]">
               
               {/* Titanium iPhone Frame */}
@@ -202,11 +205,11 @@ export default function Hero({ onOpenQuote }) {
                   </div>
 
                   {/* App Screen Content */}
-                  <div className="p-4 space-y-3.5 flex-1 overflow-hidden">
+                  <div className="p-4 space-y-3.5 flex-1 overflow-hidden bg-white">
                     
                     {/* Simulated Floating Notification Banner */}
                     {notification && (
-                      <div className="p-2.5 rounded-2xl bg-slate-900 text-white shadow-xl text-xs flex items-center gap-2.5 animate-fadeIn">
+                      <div className="p-2.5 rounded-2xl bg-[#1a1714] text-white shadow-xl text-xs flex items-center gap-2.5 animate-fadeIn">
                         <div className="w-7 h-7 rounded-full bg-emerald-500 text-white flex items-center justify-center shrink-0">
                           <Check className="w-4 h-4" />
                         </div>
@@ -220,7 +223,7 @@ export default function Hero({ onOpenQuote }) {
                     {/* App Header */}
                     <div className="flex items-center justify-between">
                       <div>
-                        <span className="text-[10px] uppercase font-extrabold tracking-wider text-blue-600">
+                        <span className="text-[9px] uppercase font-['IBM_Plex_Mono',monospace] font-bold tracking-wider text-[#c4410c]">
                           Gaurav Associates Studio
                         </span>
                         <h4 className="text-base font-extrabold text-slate-900">
@@ -242,7 +245,7 @@ export default function Hero({ onOpenQuote }) {
                       <button
                         onClick={() => setActiveAppTab('ecommerce')}
                         className={`py-1.5 rounded-lg transition ${
-                          activeAppTab === 'ecommerce' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
+                          activeAppTab === 'ecommerce' ? 'bg-white text-[#c4410c] shadow-sm' : 'text-slate-600'
                         }`}
                       >
                         Store
@@ -250,7 +253,7 @@ export default function Hero({ onOpenQuote }) {
                       <button
                         onClick={() => setActiveAppTab('health')}
                         className={`py-1.5 rounded-lg transition ${
-                          activeAppTab === 'health' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
+                          activeAppTab === 'health' ? 'bg-white text-[#c4410c] shadow-sm' : 'text-slate-600'
                         }`}
                       >
                         Health
@@ -258,7 +261,7 @@ export default function Hero({ onOpenQuote }) {
                       <button
                         onClick={() => setActiveAppTab('fintech')}
                         className={`py-1.5 rounded-lg transition ${
-                          activeAppTab === 'fintech' ? 'bg-white text-blue-600 shadow-sm' : 'text-slate-600'
+                          activeAppTab === 'fintech' ? 'bg-white text-[#c4410c] shadow-sm' : 'text-slate-600'
                         }`}
                       >
                         Fintech
@@ -268,24 +271,24 @@ export default function Hero({ onOpenQuote }) {
                     {/* Tab 1: E-Commerce Demo */}
                     {activeAppTab === 'ecommerce' && (
                       <div className="space-y-2.5 animate-fadeIn">
-                        <div className="p-3 rounded-2xl bg-gradient-to-br from-blue-600 to-indigo-700 text-white space-y-1 shadow-md">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-blue-200">Featured Website Plan</span>
+                        <div className="p-3.5 rounded-2xl bg-gradient-to-br from-[#1a1714] to-[#2c241e] text-white space-y-1 shadow-md">
+                          <span className="text-[9px] font-['IBM_Plex_Mono',monospace] font-bold uppercase tracking-wider text-[#fb923c]">FEATURED WEB PLAN</span>
                           <div className="flex items-baseline justify-between">
-                            <span className="text-lg font-black">Starter Web Plan</span>
-                            <span className="text-base font-extrabold text-amber-300">₹5,999</span>
+                            <span className="text-lg font-bold">Starter Plan</span>
+                            <span className="text-base font-extrabold text-[#fb923c]">₹5,999</span>
                           </div>
-                          <p className="text-[10px] text-blue-100">4-6 Pages • 2 Days Delivery • Free Domain</p>
+                          <p className="text-[10px] text-stone-300">4-6 Pages • 2 Days Delivery • Free Domain</p>
                         </div>
 
                         <div className="p-3 rounded-2xl bg-slate-50 border border-slate-200/80 space-y-2">
                           <div className="flex items-center justify-between text-xs font-bold text-slate-800">
                             <span>Native iOS Mobile App</span>
-                            <span className="text-blue-600">₹24,999</span>
+                            <span className="text-[#c4410c]">₹24,999</span>
                           </div>
                           <p className="text-[10px] text-slate-500">Apple App Store Approval • Push Alerts • APNs</p>
                           <button
                             onClick={() => handleSimulateAction('Added iOS App to cart!')}
-                            className="w-full py-2 rounded-xl bg-slate-900 hover:bg-slate-800 text-white text-[11px] font-bold flex items-center justify-center gap-1.5 transition active:scale-95"
+                            className="w-full py-2.5 rounded-xl bg-[#1a1714] hover:bg-[#c4410c] text-white text-[11px] font-['IBM_Plex_Mono',monospace] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 transition active:scale-95"
                           >
                             <ShoppingBag className="w-3.5 h-3.5" />
                             <span>Tap to Test Order</span>
@@ -297,11 +300,11 @@ export default function Hero({ onOpenQuote }) {
                     {/* Tab 2: Healthcare Demo */}
                     {activeAppTab === 'health' && (
                       <div className="space-y-2.5 animate-fadeIn">
-                        <div className="p-3 rounded-2xl bg-emerald-600 text-white space-y-1 shadow-md">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-emerald-200">Doctor Telemedicine</span>
+                        <div className="p-3.5 rounded-2xl bg-emerald-700 text-white space-y-1 shadow-md">
+                          <span className="text-[9px] font-['IBM_Plex_Mono',monospace] font-bold uppercase tracking-wider text-emerald-200">Doctor Telemedicine</span>
                           <div className="flex items-baseline justify-between">
-                            <span className="text-base font-black">Video Consultation</span>
-                            <span className="text-xs bg-emerald-700/80 px-2 py-0.5 rounded-full">HIPAA Ready</span>
+                            <span className="text-base font-bold">Video Consultation</span>
+                            <span className="text-xs bg-emerald-800/80 px-2 py-0.5 rounded-full font-mono">HIPAA</span>
                           </div>
                           <p className="text-[10px] text-emerald-100">Prescription Sync • Hindi & English Support</p>
                         </div>
@@ -318,22 +321,22 @@ export default function Hero({ onOpenQuote }) {
                     {/* Tab 3: Fintech Demo */}
                     {activeAppTab === 'fintech' && (
                       <div className="space-y-2.5 animate-fadeIn">
-                        <div className="p-3 rounded-2xl bg-gradient-to-br from-purple-700 to-indigo-900 text-white space-y-1 shadow-md">
-                          <span className="text-[9px] font-bold uppercase tracking-wider text-purple-200">Portfolio Net Worth</span>
+                        <div className="p-3.5 rounded-2xl bg-gradient-to-br from-[#8b5cf6] to-[#ec4899] text-white space-y-1 shadow-md">
+                          <span className="text-[9px] font-['IBM_Plex_Mono',monospace] font-bold uppercase tracking-wider text-purple-100">Portfolio Net Worth</span>
                           <div className="flex items-baseline justify-between">
-                            <span className="text-xl font-black">₹4,82,500</span>
+                            <span className="text-xl font-bold">₹4,82,500</span>
                             <span className="text-xs font-bold text-emerald-300 flex items-center gap-0.5">
                               <TrendingUp className="w-3 h-3" /> +18.4%
                             </span>
                           </div>
-                          <p className="text-[10px] text-purple-200">Biometric FaceID Login • Bank Grade Security</p>
+                          <p className="text-[10px] text-purple-100">Biometric FaceID Login • Bank Security</p>
                         </div>
 
                         <button
                           onClick={() => handleSimulateAction('UPI Payment Processed via Razorpay!')}
-                          className="w-full py-2 rounded-xl bg-slate-900 text-white text-[11px] font-bold flex items-center justify-center gap-1.5 active:scale-95"
+                          className="w-full py-2.5 rounded-xl bg-[#1a1714] text-white text-[11px] font-['IBM_Plex_Mono',monospace] font-bold uppercase tracking-wider flex items-center justify-center gap-1.5 active:scale-95"
                         >
-                          <CreditCard className="w-3.5 h-3.5 text-blue-400" />
+                          <CreditCard className="w-3.5 h-3.5 text-[#fb923c]" />
                           <span>Test Apple Pay / UPI</span>
                         </button>
                       </div>
@@ -343,15 +346,15 @@ export default function Hero({ onOpenQuote }) {
 
                   {/* App Bottom Bar */}
                   <div className="p-3 border-t border-slate-100 bg-slate-50 flex items-center justify-around text-slate-400 text-xs">
-                    <button className="text-blue-600 font-bold flex flex-col items-center text-[10px]">
+                    <button className="text-[#c4410c] font-bold flex flex-col items-center text-[10px]">
                       <Globe className="w-4 h-4" />
                       <span>Home</span>
                     </button>
-                    <button className="hover:text-blue-600 flex flex-col items-center text-[10px]">
+                    <button className="hover:text-[#c4410c] flex flex-col items-center text-[10px]">
                       <Apple className="w-4 h-4" />
                       <span>iOS Apps</span>
                     </button>
-                    <button className="hover:text-blue-600 flex flex-col items-center text-[10px]">
+                    <button className="hover:text-[#c4410c] flex flex-col items-center text-[10px]">
                       <ShoppingBag className="w-4 h-4" />
                       <span>Plans</span>
                     </button>
@@ -361,25 +364,25 @@ export default function Hero({ onOpenQuote }) {
 
               </div>
 
-              {/* Floating Badge 1: 48-Hour Rapid Launch */}
-              <div className="absolute -top-4 -left-6 z-20 hidden sm:inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-900/10 animate-float">
-                <div className="w-8 h-8 rounded-xl bg-amber-500 text-slate-950 flex items-center justify-center font-bold text-xs shadow-sm">
+              {/* Floating Badge 1: 48-Hour Rapid Delivery */}
+              <div className="absolute -top-4 -left-6 z-20 hidden sm:inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#faf7f2] border border-[rgba(26,23,20,0.12)] shadow-xl animate-float">
+                <div className="w-8 h-8 rounded-xl bg-[#c4410c] text-white flex items-center justify-center font-bold text-xs shadow-sm">
                   ⚡
                 </div>
-                <div className="text-left">
-                  <span className="text-xs font-bold text-slate-900 block">48-Hour Delivery</span>
-                  <span className="text-[10px] text-slate-500">Starter Plan ₹5,999</span>
+                <div className="text-left font-['IBM_Plex_Mono',monospace]">
+                  <span className="text-xs font-bold text-[#1a1714] block">48-Hour Delivery</span>
+                  <span className="text-[10px] text-[#1a1714]/60">Starter Plan ₹5,999</span>
                 </div>
               </div>
 
               {/* Floating Badge 2: Apple App Store Approved */}
-              <div className="absolute -bottom-4 -right-4 z-20 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-white border border-slate-200 shadow-xl shadow-slate-900/10 animate-float-reverse">
-                <div className="w-8 h-8 rounded-xl bg-slate-950 text-white flex items-center justify-center">
+              <div className="absolute -bottom-4 -right-4 z-20 inline-flex items-center gap-2.5 px-4 py-2.5 rounded-2xl bg-[#faf7f2] border border-[rgba(26,23,20,0.12)] shadow-xl animate-float-reverse">
+                <div className="w-8 h-8 rounded-xl bg-[#1a1714] text-white flex items-center justify-center">
                   <Apple className="w-4 h-4" />
                 </div>
-                <div className="text-left">
-                  <span className="text-xs font-bold text-slate-900 block">iOS Native Apps</span>
-                  <span className="text-[10px] text-emerald-600 font-bold">App Store Approved</span>
+                <div className="text-left font-['IBM_Plex_Mono',monospace]">
+                  <span className="text-xs font-bold text-[#1a1714] block">iOS Native Apps</span>
+                  <span className="text-[10px] text-emerald-700 font-bold">App Store Approved</span>
                 </div>
               </div>
 
@@ -389,17 +392,17 @@ export default function Hero({ onOpenQuote }) {
 
         </div>
 
-        {/* Infinite Animated Tech Marquee */}
-        <div className="mt-20 pt-10 border-t border-slate-200/80 overflow-hidden">
-          <p className="text-center text-[11px] font-extrabold uppercase tracking-widest text-slate-400 mb-6">
+        {/* Infinite Moving Tech Marquee */}
+        <div className="mt-20 pt-10 border-t border-[rgba(26,23,20,0.1)] overflow-hidden">
+          <p className="text-center font-['IBM_Plex_Mono',monospace] text-[10px] font-extrabold uppercase tracking-[0.25em] text-[#1a1714]/40 mb-6">
             Technologies & Frameworks We Master
           </p>
           <div className="relative w-full overflow-hidden [mask-image:linear-gradient(to_right,transparent,black_15%,black_85%,transparent)]">
-            <div className="animate-marquee flex items-center gap-8 text-xs font-bold text-slate-700 py-2">
+            <div className="animate-marquee flex items-center gap-8 font-['IBM_Plex_Mono',monospace] text-xs font-bold text-[#1a1714] py-2">
               {[...techIcons, ...techIcons].map((item, idx) => (
                 <div
                   key={idx}
-                  className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-white border border-slate-200/90 shadow-sm hover:border-blue-400 transition"
+                  className="flex items-center gap-2 px-4 py-2 rounded-2xl bg-white border border-[rgba(26,23,20,0.1)] shadow-sm hover:border-[#c4410c] transition"
                 >
                   <span className={`w-2 h-2 rounded-full ${item.color.replace('text-', 'bg-')}`}></span>
                   <span>{item.name}</span>

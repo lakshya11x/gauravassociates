@@ -14,7 +14,7 @@ export default function WhyUs() {
       icon: Zap,
       title: 'Lightning Fast Delivery',
       desc: 'Our Starter Website is delivered within 48 hours! We respect deadlines with precision planning and agile sprints.',
-      color: 'text-amber-600 bg-amber-50 border-amber-200'
+      color: 'text-[#c4410c] bg-orange-50 border-orange-200'
     },
     {
       icon: Apple,
@@ -49,20 +49,20 @@ export default function WhyUs() {
   ];
 
   return (
-    <section id="why-us" className="py-24 bg-slate-50/70 border-t border-slate-200/80 relative">
+    <section id="why-us" className="py-24 bg-[#faf7f2] border-t border-[rgba(26,23,20,0.1)] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div className="text-center max-w-3xl mx-auto space-y-4 mb-16">
-          <div className="inline-flex items-center gap-2 px-3.5 py-1.5 rounded-full bg-blue-50 border border-blue-200 text-blue-700 text-xs font-semibold uppercase tracking-wider">
-            <span>Why Choose Us</span>
+          <div className="inline-flex items-center gap-2 font-['IBM_Plex_Mono',monospace] text-[11px] tracking-[0.25em] text-[#c4410c] uppercase">
+            <span>06 / WHY GAURAV ASSOCIATES</span>
           </div>
-          <h2 className="text-3xl sm:text-5xl font-extrabold text-slate-900 tracking-tight">
+          <h2 className="font-['Plus_Jakarta_Sans',sans-serif] font-extrabold text-3xl sm:text-5xl text-[#1a1714] tracking-tight">
             Why Hundreds of Businesses Choose <br className="hidden sm:inline" />
-            <span className="serif-highlight text-4xl sm:text-6xl font-normal">
-              Gaurav Associates
+            <span className="g-text">
+              Our Digital Studio
             </span>
           </h2>
-          <p className="text-sm sm:text-base text-slate-600">
+          <p className="text-base text-[#1a1714]/70">
             We bridge the gap between expensive agencies and unreliable freelancers by offering agency-grade code at startup-friendly prices.
           </p>
         </div>
@@ -73,23 +73,23 @@ export default function WhyUs() {
             return (
               <div
                 key={index}
-                className="p-8 rounded-3xl bg-white border border-slate-200/90 hover:border-blue-300 transition duration-300 space-y-4 hover:-translate-y-1 shadow-md hover:shadow-xl"
+                className="digi-card p-8 space-y-4"
               >
                 <div className={`w-12 h-12 rounded-2xl border flex items-center justify-center ${item.color}`}>
                   <Icon className="w-6 h-6" />
                 </div>
-                <h3 className="text-lg font-bold text-slate-900">{item.title}</h3>
-                <p className="text-xs sm:text-sm text-slate-600 leading-relaxed">{item.desc}</p>
+                <h3 className="text-lg font-bold text-[#1a1714]">{item.title}</h3>
+                <p className="text-sm text-[#1a1714]/70 leading-relaxed">{item.desc}</p>
               </div>
             );
           })}
         </div>
 
         {/* Comparison Callout Box */}
-        <div className="mt-16 rounded-3xl bg-blue-600 text-white p-8 sm:p-10 text-center sm:text-left flex flex-col md:flex-row items-center justify-between gap-6 shadow-xl shadow-blue-500/20">
+        <div className="mt-16 rounded-3xl bg-[#1a1714] text-white p-8 sm:p-10 text-center sm:text-left flex flex-col md:flex-row items-center justify-between gap-6 shadow-2xl">
           <div className="space-y-2">
             <h4 className="text-xl sm:text-2xl font-bold">Ready to take your business online?</h4>
-            <p className="text-xs sm:text-sm text-blue-100 max-w-xl">
+            <p className="text-sm text-stone-300 max-w-xl font-light">
               Get in touch today and have your working website prototype in 48 hours or your iOS app designed this week.
             </p>
           </div>
@@ -97,9 +97,9 @@ export default function WhyUs() {
             href="https://wa.me/919876543210?text=Hi%20Gaurav%20Associates,%20I%20am%20interested%20in%20building%20a%20website%20or%20mobile%20app"
             target="_blank"
             rel="noopener noreferrer"
-            className="px-7 py-3.5 rounded-full bg-white text-blue-600 font-bold text-xs uppercase tracking-wider shadow-lg hover:bg-blue-50 transition-all whitespace-nowrap"
+            className="digi-btn digi-btn-grad text-white font-bold whitespace-nowrap"
           >
-            Chat on WhatsApp
+            CHAT ON WHATSAPP →
           </a>
         </div>
 
